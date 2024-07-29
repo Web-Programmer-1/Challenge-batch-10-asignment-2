@@ -121,6 +121,7 @@ ul>li>a:hover{
 .workout-container{
   width: 70%;
   margin: 30px auto;
+  
   display: flex;
   justify-content: space-between;
 }
@@ -285,134 +286,153 @@ line-height: 40px;
 letter-spacing: 1px;
 text-align: left;
 }
-.tranning-content{
+.group-content{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  max-width: 100%;
+
 }
-.tranning-content>h1{
-color: rgb(255, 255, 255);
-font-family: "Inter", sans-serif;
-background: linear-gradient(90deg, tomato, orange);
--webkit-text-fill-color: transparent;
--webkit-background-clip: text;
-font-size: 48px;
+.group-content>h1{
+color: tomato;
+font-family: Inter;
+font-size: 36px;
 font-weight: 900;
 line-height: 120%;
 letter-spacing: 0%;
 text-align: left;
+max-width: 100%;
 }
-.tranning-content>p{
-color: rgba(255, 255, 255, 0.5);
-font-weight: 300;
-font-size: 14px;
-}
-.grid-gallery{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 67%;
-  place-items: center;
-  align-self: center;
-  /* border: 2px solid lime; */
-  margin: 20px auto;
-
-}
-.grid-gallery>div>img{
-  border-radius: 100%;
-  padding: 8px 12px;
-  object-fit: cover;
-
-}
-.grid-gallery>div{
-  width: 231px;
-  height: 300px;
-  /* border: 1px solid lime; */
-  text-align: center;
-}
-.grid-gallery>div>h1{
-color: rgb(255, 255, 255);
-font-family: Inter;
-font-size: 24px;
-font-weight: 600;
-line-height: 120%;
-letter-spacing: 0%;
-background: linear-gradient(90deg, tomato, orange);
--webkit-text-fill-color: transparent;
--webkit-background-clip: text;
-}
-.grid-gallery>div>p{
+.group-content>p{
 color: rgba(255, 255, 255, 0.5);
 font-family: Inter;
 font-size: 14px;
 font-weight: 400;
-line-height: 18px;
+line-height: 24px;
 letter-spacing: 0.3px;
+max-width: 100%;
 text-align: center;
-margin-top: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media  screen and (max-width:576px) {
-  .nav-item>.logo>h1{
-    font-size: 24px;
-}
-.toggle{
-  transform: translateY(-14px) translateX(150px);
-
-}
-ul{
-  display: none;
-}
-.workout-container{
-  flex-direction: column;
-  transform: translateX(9px);
-}
-.workout-image{
-  transform: translateY(-130px) translateX(30px);
-}
+/* grid gallery section */
 .grid-gallery{
-  grid-template-columns: repeat(1,1fr);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  max-width: 70%;
+  gap: 15px;
+  margin: 20px auto;
+  /* border: 2px solid lime; */
 }
+.grid-gallery>div{
+  width: 290px;
+  height: 274px;
+  /* border: 2px solid red; */
+}
+.grid-gallery>div>img{
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin: auto;
+}
+.grid-gallery>div>h1{
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2;
+  color:tomato;
+}
+.grid-gallery>div>P{
+  text-align: center;
+  color: #fff;
+  opacity: 50%;
+  font-size: 15px;
+ }
+  .running-container{
+    max-width: 80%;
+    min-height: 530px;
+    /* border: 2px solid blueviolet; */
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 4px rgba(63, 58, 58, 0.706);
+  }
+  .run-content>h1{
+    font-size: 42px;
+    line-height: 120%;
+    font-weight: 900;
+    color: #fff;
+  }
+  .run-content>p{
+    font-size: 14px;
+    opacity: 50%;
+    line-height: 24px;
+    letter-spacing: 0%;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .extra{
+    color: tomato;
+  }
+  .join{
+    padding: 13px 37px;
+    background-color: rgb(230, 83, 60);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+
   }
 
 
 
+@media screen and (max-width:576px) {
+  .workout-container{
+    flex-direction: column;
+    overflow-x: hidden;
+    max-width: 80%;
+   
+  }
+  ul{
+    display: none;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .toggle>button{
+    margin-left: 40px;
+  }
+  .workout-image>.card2{
+    margin-left: 100px;
+  }
+  .grid-gallery{
+    grid-template-columns: repeat(1,1fr);
+    gap: 15px;
+  }
+  .running-container{
+    flex-direction: column;
+    width: 100%;
+  }
+  .run-content{
+    margin-left: 50px;
+  }
+  .run-content>.join{
+    margin-left: 75px;
+  }
+  .running-man>img{
+    width: 280px;
+    height: 190px;
+    margin-top: -10px;
+  }
 
-
-
-
+}
 
   
