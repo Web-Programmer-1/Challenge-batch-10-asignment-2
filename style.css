@@ -149,6 +149,7 @@ letter-spacing: 0.5px;
 text-align: left;
 margin-top: 28px;
 }
+
 .workout-container>.workout-content>.btn1{
   padding: 9px 19px;
   text-align: center;
@@ -284,10 +285,73 @@ line-height: 40px;
 letter-spacing: 1px;
 text-align: left;
 }
+.tranning-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.tranning-content>h1{
+color: rgb(255, 255, 255);
+font-family: "Inter", sans-serif;
+background: linear-gradient(90deg, tomato, orange);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+font-size: 48px;
+font-weight: 900;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: left;
+}
+.tranning-content>p{
+color: rgba(255, 255, 255, 0.5);
+font-weight: 300;
+font-size: 14px;
+}
+.grid-gallery{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 67%;
+  place-items: center;
+  align-self: center;
+  /* border: 2px solid lime; */
+  margin: 20px auto;
 
+}
+.grid-gallery>div>img{
+  border-radius: 100%;
+  padding: 8px 12px;
+  object-fit: cover;
 
-
-
+}
+.grid-gallery>div{
+  width: 231px;
+  height: 300px;
+  /* border: 1px solid lime; */
+  text-align: center;
+}
+.grid-gallery>div>h1{
+color: rgb(255, 255, 255);
+font-family: Inter;
+font-size: 24px;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 0%;
+background: linear-gradient(90deg, tomato, orange);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}
+.grid-gallery>div>p{
+color: rgba(255, 255, 255, 0.5);
+font-family: Inter;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0.3px;
+text-align: center;
+margin-top: 5px;
+}
 
 
 
@@ -329,7 +393,6 @@ text-align: left;
   transform: translateY(-14px) translateX(150px);
 
 }
-
 ul{
   display: none;
 }
@@ -340,7 +403,11 @@ ul{
 .workout-image{
   transform: translateY(-130px) translateX(30px);
 }
+.grid-gallery{
+  grid-template-columns: repeat(1,1fr);
+}
   }
+
 
 
 
